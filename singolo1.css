@@ -1,0 +1,248 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', ;
+}
+
+.header {
+    height: 95px;
+}
+
+.container {
+    max-width: 1100px;
+    width: 100%;
+    height: 100%;
+    padding: 0 40px;
+    margin: 0 auto;
+}
+
+.header__top {
+    height: 89px;
+    padding: 35px 0;
+    width: 100%;
+    background-color: rgb(45, 48, 58);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__bottom {
+    height: 6px;
+    width: 100%;
+    background-color: rgb(50, 55, 70);
+}
+
+.logo {
+    cursor: pointer;
+    padding-left: 40px;
+}
+
+.logo__img {
+    width: 118px;
+    height: 19px;
+}
+
+.logo__img__red {
+    width: 118px;
+    height: 19px;
+    display: none;
+}
+
+.logo:hover .logo__img {
+    display: none;
+}
+
+.logo:hover .logo__img__red {
+    display: block;
+}
+
+.menu {
+    padding-top: 7px;
+}
+
+.menu__list {
+    display: flex;
+}
+
+.menu__list li+li {
+    padding-left: 29px;
+}
+
+.menu__list li:last-child {
+    padding-right: 40px;
+}
+
+.menu__list li {
+    list-style-type: none;
+}
+
+.menu__list a {
+    color: white;
+    font-weight: 400;
+    font-size: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .5s;
+}
+
+.menu__list a:hover {
+    color: rgb(240, 108, 100);
+}
+
+.slider {
+    height: 600px;
+}
+
+.slider__phone {
+    height: 595px;
+    background-color: rgb(240, 108, 100);
+    position: relative;
+}
+
+.slider__bottom {
+    height: 5px;
+    background-color: rgb(234, 106, 107);
+}
+
+.iiphone__vertical {
+    position: absolute;
+    top: 53px;
+    left: 112px;
+}
+
+.iphone__horizontal {
+    position: absolute;
+    top: 174px;
+    left: 425px;
+}
+
+.left__arrow {
+    position: absolute;
+    top: 204px;
+    left: 42px;
+    height: 27px;
+    width: 16px;
+    font-size: 3.3em;
+    opacity: 0.5;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.left__arrow:hover {
+    opacity: 1;
+}
+
+.right__arrow {
+    position: absolute;
+    right: 40px;
+    top: 204px;
+    width: 16px;
+    height: 27px;
+    font-size: 3.3em;
+    opacity: 0.5;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.right__arrow:hover {
+    opacity: 1;
+}
+
+.services {
+    height: 501px;
+    background-color: rgb(242, 242, 242);
+    color: #666699;
+}
+
+.services__title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 90px;
+    font-family: "Lato";
+    text-align: left;
+    padding: 0 40px;
+    font-weight: 900;
+    color: rgb(102, 109, 137);
+}
+
+h1 {
+    margin: -6px 0;
+    letter-spacing: -0.029em;
+}
+
+.services__text {
+    height: 131px;
+    padding-left: 40px;
+    padding-top: 23px;
+    padding-bottom: 36px;
+    padding-right: 23px;
+    /* line-height: 1.6em; */
+    font-size: 18px;
+    font-family: "Lato";
+    color: rgb(118, 126, 158);
+    line-height: 1.667;
+    letter-spacing: -0.0011em;
+}
+
+.services__flex-table {
+    height: 275px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: flex-start; */
+    justify-content: space-between;
+}
+
+.services__bottom {
+    height: 6px;
+    background-color: white;
+}
+
+.flex__element {
+    display: flex;
+    justify-content: space-between;
+    width: 299px;
+    height: 86px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    padding-left: 22px;
+}
+
+.item__title {
+    margin-top: -5px;
+    font-size: 18px;
+    font-family: "Lato";
+    font-weight: 900;
+}
+
+.item__text {
+    padding-top: 8px;
+    font-size: 12px;
+    font-family: "Lato";
+    font-weight: 400;
+    /* letter-spacing: 0.051716em; */
+    line-height: 1.797;
+    text-align: justify;
+}
+
+.Quisque_luctus__quam_eget_molestie_commodo__lac {
+    font-size: 12px;
+    font-family: "Lato";
+    color: rgb(118, 126, 158);
+    line-height: 1.797;
+    text-align: justifyLeft;
+    position: absolute;
+    left: 438.437px;
+    top: 967.261px;
+    width: 220px;
+    height: 52px;
+    z-index: 30;
+}
