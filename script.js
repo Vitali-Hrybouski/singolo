@@ -269,6 +269,7 @@ function changeBg3() {
 
 // функция фиксации цвета элементов навигации хэдера
 let menuLi = document.querySelectorAll(".menu__nav");
+let burgerMenuLi = document.querySelectorAll(".menu__burger-nav");
 
 let topHeader = document.getElementById("home").getBoundingClientRect().top;
 let topServices = document.getElementById("services").getBoundingClientRect().top;
@@ -286,6 +287,10 @@ let bottomContact = document.getElementById("contact").getBoundingClientRect().b
 for (let i = 0; i < menuLi.length; i++) {
     menuLi[i].onclick = selectionMenuNav;
 }
+for (let i = 0; i < burgerMenuLi.length; i++) {
+    burgerMenuLi[i].onclick = selectionMenuNav;
+}
+
 function selectionMenuNav() {
     for (let i = 0; i < menuLi.length; i++) {
         menuLi[i].style.color = "white";
@@ -295,6 +300,7 @@ function selectionMenuNav() {
 function resetColorNav() {
     for (let i = 0; i < menuLi.length; i++) {
         menuLi[i].style.color = "white";
+        burgerMenuLi[i].style.color = "white";
     }
 }
 
@@ -303,22 +309,27 @@ window.addEventListener('scroll', function () {
     if (y < bottomHeader) {
         resetColorNav();
         menuLi[0].style.color = "rgb(240, 108, 100)";
+        burgerMenuLi[0].style.color = "rgb(240, 108, 100)";
     }
     if (y >= topServices && y < bottomServices) {
         resetColorNav();
         menuLi[1].style.color = "rgb(240, 108, 100)";
+        burgerMenuLi[1].style.color = "rgb(240, 108, 100)";
     }
     if (y >= topPortfolio && y < bottomPortfolio) {
         resetColorNav();
         menuLi[2].style.color = "rgb(240, 108, 100)";
+        burgerMenuLi[2].style.color = "rgb(240, 108, 100)";
     }
     if (y >= topAbout && y < bottomAbout) {
         resetColorNav();
         menuLi[3].style.color = "rgb(240, 108, 100)";
+        burgerMenuLi[3].style.color = "rgb(240, 108, 100)";
     }
     if (y >= topContact && y < bottomContact) {
         resetColorNav();
         menuLi[4].style.color = "rgb(240, 108, 100)";
+        burgerMenuLi[4].style.color = "rgb(240, 108, 100)";
     }
 });
 
@@ -398,3 +409,27 @@ function closeSend() {
     document.forms["form"].detail.value = "";
     popup.style.display = "none";
 }
+
+// активация бургер меню
+let menu = document.querySelector('.menu__btn__bloq');
+let cross = document.querySelector('.menu__btn__cross');
+let burgerList = document.querySelectorAll('.menu__burger-nav');
+menu.onclick = open;
+for (let i = 0; i < burgerList.length; i++) {
+    burgerList[i].onclick = close;
+}
+cross.onclick = close;
+
+function open() {
+    document.querySelector('.burger__layer').style.display = "block";
+    menu.style.display = 'none';
+    cross.style.display = 'block';
+}
+
+function close() {
+    document.querySelector('.burger__layer').style.display = "none";
+    menu.style.display = 'block';
+    cross.style.display = 'none';
+}
+
+
